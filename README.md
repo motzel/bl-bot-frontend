@@ -1,6 +1,6 @@
 # bl-bot frontend
 
-Simple frontend for [`bl-bot`](https://github.com/bl-bot) project.
+Simple frontend for [`bl-bot`](https://github.com/motzel/bl-bot) project.
 
 ## Developing
 
