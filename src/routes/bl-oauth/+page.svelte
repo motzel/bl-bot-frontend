@@ -23,7 +23,7 @@
 		}
 	}
 
-	$: cmd = `/bl-set-clan-invite-code ${code}`;
+	$: cmd = `/bl-set-clan-invite-code auth_code:${code}`;
 </script>
 
 <svelte:head>
