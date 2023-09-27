@@ -8,7 +8,7 @@
 	function copyCodeToClipboard() {
 		if (!code?.length) return;
 
-		navigator.clipboard.writeText(copyCmd).catch((e) => {
+		navigator.clipboard.writeText(cmd).catch((e) => {
 			console.error(e);
 		});
 
@@ -23,7 +23,7 @@
 		}
 	}
 
-	$: copyCmd = `/bl-invite-code ${code}`;
+	$: cmd = `/bl-set-clan-invite-code ${code}`;
 </script>
 
 <svelte:head>
@@ -34,7 +34,7 @@
 	{#if code?.length}
 		<h1>Authorization code received</h1>
 		<p>Now copy the following command for the bot and paste it in Discord</p>
-		<pre>/bl-invite-code {code} <svg
+		<pre>{cmd} <svg
 				tabindex="0"
 				on:click={copyCodeToClipboard}
 				on:keypress={onKeyPress}
